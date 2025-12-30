@@ -1,0 +1,271 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Kredit Lab Analysis for Sample Company Sdn Bhd",
+  
+  "company": {
+    "name": "Sample Company Sdn Bhd",
+    "reg_no": "123456-X"
+  },
+  
+  "meta": {
+    "report_date": "2024-12-15",
+    "analysis_date": "2024-12-20",
+    "prepared_by": "Kredit Lab System"
+  },
+  
+  "entities": [
+    {
+      "type": "Director",
+      "name": "Ahmad bin Abdullah",
+      "ic": "800101-14-5555",
+      "shareholding": "60%"
+    },
+    {
+      "type": "Director",
+      "name": "Siti binti Hassan",
+      "ic": "850515-10-6666",
+      "shareholding": "40%"
+    }
+  ],
+  
+  "banks": {
+    "RHB": {
+      "score": 78.5,
+      "raw_grade": "B",
+      "final_grade": "B",
+      "strict1_pass": 0,
+      "strict1_total": 0,
+      "strict2_pass": 7,
+      "strict2_total": 8,
+      "preference_pass": 6,
+      "preference_total": 7,
+      "ccris": [
+        {"id": 1, "classification": "Preference", "status": "PASS", "criteria": "≥2 years track record", "evidence": "Company: 5 years, Director 1: 8 years"},
+        {"id": 2, "classification": "Preference", "status": "PASS", "criteria": "Any entity owns property", "evidence": "Director 1 has HSLNFNCE with COL TYPE=PROPERTIES"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Never declined by RHB", "evidence": "No RHB declines found"},
+        {"id": 4, "classification": "Strict 2", "status": "PASS", "criteria": "≤2 WC applications", "evidence": "1 WC application in 12 months"},
+        {"id": 5, "classification": "Informational", "status": "INFO", "criteria": "Informational", "evidence": "Status A and T included in DSCR"},
+        {"id": 6, "classification": "Informational", "status": "INFO", "criteria": "Informational", "evidence": "—"},
+        {"id": 7, "classification": "Informational", "status": "INFO", "criteria": "Informational", "evidence": "—"},
+        {"id": 8, "classification": "Preference", "status": "PASS", "criteria": "≤2 WC pending", "evidence": "0 pending applications"},
+        {"id": 9, "classification": "Strict 2", "status": "PASS", "criteria": "All entities = N", "evidence": "All entities: N"},
+        {"id": 10, "classification": "Strict 2", "status": "PASS", "criteria": "No C/T/K tagging", "evidence": "No R&R/AKPK tagging found"},
+        {"id": 11, "classification": "Preference", "status": "PASS", "criteria": "≤70% all facilities", "evidence": "Company OD: 45% utilization"},
+        {"id": 12, "classification": "Preference", "status": "FAIL", "criteria": "≤70% all cards", "evidence": "Director 1 CC: 75% utilization"},
+        {"id": 13, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 3=0; MIA 2 rules", "evidence": "Clean conduct - all MIA 0"},
+        {"id": 14, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 0 or 1 only", "evidence": "Current month: All MIA 0"},
+        {"id": 15, "classification": "Not Applicable", "status": "N/A", "criteria": "Not applicable", "evidence": "—"},
+        {"id": 16, "classification": "Informational", "status": "INFO", "criteria": ">RM250k = commitment", "evidence": "No personal loans >RM250k"}
+      ],
+      "ctos": [
+        {"id": 1, "classification": "Preference", "status": "PASS", "criteria": "No legal suits", "evidence": "No legal suits found"},
+        {"id": 2, "classification": "Strict 2", "status": "PASS", "criteria": "Zero tolerance defendant", "evidence": "Not defendant in any suit"},
+        {"id": 3, "classification": "Strict 2", "status": "PASS", "criteria": ">RM5k needs approval", "evidence": "No trade bureau records"},
+        {"id": 4, "classification": "Strict 2", "status": "FAIL", "criteria": "Require settlement", "evidence": "Outstanding legal status on 1 loan - requires settlement letter"}
+      ]
+    },
+    "Maybank": {
+      "score": 82.0,
+      "raw_grade": "A",
+      "final_grade": "A",
+      "strict1_pass": 0,
+      "strict1_total": 0,
+      "strict2_pass": 6,
+      "strict2_total": 6,
+      "preference_pass": 7,
+      "preference_total": 8,
+      "ccris": [
+        {"id": 1, "classification": "Preference", "status": "PASS", "criteria": "≥2 years track record", "evidence": "Company: 5 years"},
+        {"id": 2, "classification": "Preference", "status": "PASS", "criteria": "Any entity owns property", "evidence": "Director 1 owns property"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Never declined by Maybank", "evidence": "No declines"},
+        {"id": 4, "classification": "Preference", "status": "PASS", "criteria": "≤2 WC applications", "evidence": "1 application"},
+        {"id": 5, "classification": "Informational", "status": "INFO", "criteria": "Informational", "evidence": "—"},
+        {"id": 6, "classification": "Informational", "status": "INFO", "criteria": "Informational", "evidence": "—"},
+        {"id": 7, "classification": "Informational", "status": "INFO", "criteria": "Informational", "evidence": "—"},
+        {"id": 8, "classification": "Preference", "status": "PASS", "criteria": "≤2 WC pending", "evidence": "0 pending"},
+        {"id": 9, "classification": "Strict 2", "status": "PASS", "criteria": "All entities = N", "evidence": "All N"},
+        {"id": 10, "classification": "Strict 2", "status": "PASS", "criteria": "No C/T/K tagging", "evidence": "Clean"},
+        {"id": 11, "classification": "Preference", "status": "PASS", "criteria": "<100% utilization", "evidence": "45% OD util"},
+        {"id": 12, "classification": "Preference", "status": "FAIL", "criteria": "≤70% all cards", "evidence": "75% CC util"},
+        {"id": 13, "classification": "Strict 2", "status": "PASS", "criteria": "MIA rules", "evidence": "Clean"},
+        {"id": 14, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 0 or 1", "evidence": "MIA 0"},
+        {"id": 15, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 16, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"}
+      ],
+      "ctos": [
+        {"id": 1, "classification": "Preference", "status": "PASS", "criteria": "No suits", "evidence": "Clean"},
+        {"id": 2, "classification": "Strict 2", "status": "PASS", "criteria": "Zero tolerance", "evidence": "Not defendant"},
+        {"id": 3, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 4, "classification": "Strict 2", "status": "PASS", "criteria": "Settlement", "evidence": "No legal status issues"}
+      ]
+    },
+    "CIMB": {
+      "score": 75.0,
+      "raw_grade": "B",
+      "final_grade": "B",
+      "strict1_pass": 2,
+      "strict1_total": 2,
+      "strict2_pass": 7,
+      "strict2_total": 8,
+      "preference_pass": 4,
+      "preference_total": 5,
+      "ccris": [
+        {"id": 1, "classification": "Strict 1", "status": "PASS", "criteria": "≥1 year property loan", "evidence": "Director 1: 3 years property loan"},
+        {"id": 2, "classification": "Strict 1", "status": "PASS", "criteria": "Property ownership", "evidence": "Director 1 owns property"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Never declined", "evidence": "No declines"},
+        {"id": 4, "classification": "Strict 2", "status": "PASS", "criteria": "≤2 WC applications", "evidence": "1 application"},
+        {"id": 5, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 6, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 7, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 8, "classification": "Preference", "status": "PASS", "criteria": "≤2 pending", "evidence": "0 pending"},
+        {"id": 9, "classification": "Strict 2", "status": "PASS", "criteria": "All = N", "evidence": "All N"},
+        {"id": 10, "classification": "Strict 2", "status": "PASS", "criteria": "No C/T/K", "evidence": "Clean"},
+        {"id": 11, "classification": "Preference", "status": "PASS", "criteria": "<100% OD", "evidence": "45%"},
+        {"id": 12, "classification": "Preference", "status": "PASS", "criteria": "≤80% cards", "evidence": "75%"},
+        {"id": 13, "classification": "Strict 2", "status": "PASS", "criteria": "MIA rules", "evidence": "Clean"},
+        {"id": 14, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 0/1", "evidence": "MIA 0"},
+        {"id": 15, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 16, "classification": "Strict 2", "status": "PASS", "criteria": "≤3 personal loans", "evidence": "0 personal loans in 12mo"}
+      ],
+      "ctos": [
+        {"id": 1, "classification": "Preference", "status": "FAIL", "criteria": "No suits", "evidence": "1 suit as plaintiff"},
+        {"id": 2, "classification": "Strict 2", "status": "PASS", "criteria": "Zero tolerance", "evidence": "Plaintiff only, not defendant"},
+        {"id": 3, "classification": "Strict 2", "status": "PASS", "criteria": "With settlement", "evidence": "No trade bureau"},
+        {"id": 4, "classification": "Strict 2", "status": "FAIL", "criteria": "Settlement", "evidence": "Legal status pending"}
+      ]
+    },
+    "Standard Chartered": {
+      "score": 70.5,
+      "raw_grade": "B",
+      "final_grade": "B",
+      "strict1_pass": 1,
+      "strict1_total": 1,
+      "strict2_pass": 6,
+      "strict2_total": 7,
+      "preference_pass": 5,
+      "preference_total": 6,
+      "ccris": [
+        {"id": 1, "classification": "Preference", "status": "PASS", "criteria": "≥1 year track record", "evidence": "5 years"},
+        {"id": 2, "classification": "Preference", "status": "PASS", "criteria": "Property ownership", "evidence": "Yes"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Never declined", "evidence": "No declines"},
+        {"id": 4, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 5, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 6, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 7, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 8, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 9, "classification": "Strict 2", "status": "PASS", "criteria": "All = N", "evidence": "All N"},
+        {"id": 10, "classification": "Strict 2", "status": "PASS", "criteria": "No R&R", "evidence": "Clean"},
+        {"id": 11, "classification": "Preference", "status": "PASS", "criteria": "≤80% OD", "evidence": "45%"},
+        {"id": 12, "classification": "Strict 2", "status": "PASS", "criteria": "<85% cards", "evidence": "75%"},
+        {"id": 13, "classification": "Strict 2", "status": "PASS", "criteria": "MIA rules", "evidence": "Clean"},
+        {"id": 14, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 0/1", "evidence": "MIA 0"},
+        {"id": 15, "classification": "Strict 1", "status": "PASS", "criteria": "RM0 non-bank", "evidence": "No non-bank borrowing"},
+        {"id": 16, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"}
+      ],
+      "ctos": [
+        {"id": 1, "classification": "Preference", "status": "FAIL", "criteria": "No suits", "evidence": "1 suit"},
+        {"id": 2, "classification": "Strict 2", "status": "PASS", "criteria": "Zero tolerance", "evidence": "Plaintiff only"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Approval possible", "evidence": "No trade bureau"},
+        {"id": 4, "classification": "Strict 2", "status": "FAIL", "criteria": "Settlement", "evidence": "Pending"}
+      ]
+    },
+    "SME Bank": {
+      "score": 85.0,
+      "raw_grade": "A",
+      "final_grade": "A",
+      "strict1_pass": 0,
+      "strict1_total": 0,
+      "strict2_pass": 6,
+      "strict2_total": 6,
+      "preference_pass": 4,
+      "preference_total": 5,
+      "ccris": [
+        {"id": 1, "classification": "Not Applicable", "status": "N/A", "criteria": "No requirement", "evidence": "—"},
+        {"id": 2, "classification": "Not Applicable", "status": "N/A", "criteria": "No requirement", "evidence": "—"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Never declined", "evidence": "No declines"},
+        {"id": 4, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 5, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 6, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 7, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 8, "classification": "Preference", "status": "PASS", "criteria": "≤3 pending", "evidence": "0 pending"},
+        {"id": 9, "classification": "Strict 2", "status": "PASS", "criteria": "All = N", "evidence": "All N"},
+        {"id": 10, "classification": "Strict 2", "status": "PASS", "criteria": "No R&R", "evidence": "Clean"},
+        {"id": 11, "classification": "Preference", "status": "PASS", "criteria": "≤80% OD", "evidence": "45%"},
+        {"id": 12, "classification": "Preference", "status": "PASS", "criteria": "<100% cards", "evidence": "75%"},
+        {"id": 13, "classification": "Strict 2", "status": "PASS", "criteria": "MIA rules", "evidence": "Clean"},
+        {"id": 14, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 0/1", "evidence": "MIA 0"},
+        {"id": 15, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 16, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"}
+      ],
+      "ctos": [
+        {"id": 1, "classification": "Preference", "status": "FAIL", "criteria": "No suits", "evidence": "1 suit"},
+        {"id": 2, "classification": "Strict 2", "status": "PASS", "criteria": "Zero tolerance", "evidence": "Plaintiff"},
+        {"id": 3, "classification": "Strict 2", "status": "PASS", "criteria": "Settlement/arrangement", "evidence": "No trade bureau"},
+        {"id": 4, "classification": "Strict 2", "status": "PASS", "criteria": "Settlement", "evidence": "No legal status issues"}
+      ]
+    },
+    "Bank Rakyat": {
+      "score": 85.0,
+      "raw_grade": "A",
+      "final_grade": "A",
+      "strict1_pass": 0,
+      "strict1_total": 0,
+      "strict2_pass": 6,
+      "strict2_total": 6,
+      "preference_pass": 4,
+      "preference_total": 5,
+      "ccris": [
+        {"id": 1, "classification": "Not Applicable", "status": "N/A", "criteria": "No requirement", "evidence": "—"},
+        {"id": 2, "classification": "Not Applicable", "status": "N/A", "criteria": "No requirement", "evidence": "—"},
+        {"id": 3, "classification": "Preference", "status": "PASS", "criteria": "Never declined", "evidence": "No declines"},
+        {"id": 4, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 5, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 6, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 7, "classification": "Informational", "status": "INFO", "criteria": "Info", "evidence": "—"},
+        {"id": 8, "classification": "Preference", "status": "PASS", "criteria": "≤3 pending", "evidence": "0 pending"},
+        {"id": 9, "classification": "Strict 2", "status": "PASS", "criteria": "All = N", "evidence": "All N"},
+        {"id": 10, "classification": "Strict 2", "status": "PASS", "criteria": "No C/T/K/R", "evidence": "Clean"},
+        {"id": 11, "classification": "Preference", "status": "PASS", "criteria": "≤80% OD", "evidence": "45%"},
+        {"id": 12, "classification": "Preference", "status": "PASS", "criteria": "≤90% cards", "evidence": "75%"},
+        {"id": 13, "classification": "Strict 2", "status": "PASS", "criteria": "MIA rules", "evidence": "Clean"},
+        {"id": 14, "classification": "Strict 2", "status": "PASS", "criteria": "MIA 0/1", "evidence": "MIA 0"},
+        {"id": 15, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"},
+        {"id": 16, "classification": "Not Applicable", "status": "N/A", "criteria": "N/A", "evidence": "—"}
+      ],
+      "ctos": [
+        {"id": 1, "classification": "Preference", "status": "FAIL", "criteria": "No suits", "evidence": "1 suit"},
+        {"id": 2, "classification": "Strict 2", "status": "PASS", "criteria": "Zero tolerance", "evidence": "Plaintiff"},
+        {"id": 3, "classification": "Strict 2", "status": "PASS", "criteria": "Settlement/arrangement", "evidence": "No trade bureau"},
+        {"id": 4, "classification": "Strict 2", "status": "PASS", "criteria": "Settlement", "evidence": "No legal status issues"}
+      ]
+    }
+  },
+  
+  "consolidated": {
+    "score": 79.3,
+    "raw_grade": "B",
+    "final_grade": "B",
+    "strict1_pass": 3,
+    "strict1_total": 3,
+    "strict2_pass": 38,
+    "strict2_total": 41,
+    "preference_pass": 30,
+    "preference_total": 36,
+    "explanation": "Company shows strong credit profile with clean CCRIS conduct across all entities. Minor issues with credit card utilization (75%) and one legal status requiring settlement letter for RHB. Eligible for financing with most banks."
+  },
+  
+  "critical_findings": [],
+  
+  "strengths": [
+    "Clean CCRIS conduct - All MIA 0 across 12 months",
+    "No Special Attention Account flags",
+    "No R&R/AKPK restructuring",
+    "Property ownership verified",
+    "Strong CCRIS vintage (5+ years)"
+  ],
+  
+  "attention_items": [
+    "Credit card utilization at 75% (exceeds RHB/Maybank 70% preference)",
+    "Legal status on 1 loan requires settlement letter for RHB/CIMB/Standard Chartered"
+  ]
+}
